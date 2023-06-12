@@ -1,0 +1,65 @@
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+
+
+    background-color: #000;
+}
+.moving-container{
+    height: 40vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+
+
+/* 
+canvas{
+    background-color: #000;
+} */
+ #logo-heading{
+    color: #0baae3;
+    font-size: 50px;
+} 
+#logo-Heading{
+    color: #0baae3;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+.logo-des{
+    color: #77b2c7;
+    
+}
+.text-container{
+    height: 20vh;
+}
+.logo-des1{
+    color: #77b2c7;
+    font-size: 25px;
+}
+.firstword{
+    color: #0baae3;
+    margin-top: 30px;
+}
+.p1{
+    color: #77b2c7;
+}
+ul li{
+    color: #0baae3;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-duration: 0.5s;
+}
+
+ul li:hover{
+
+    opacity: 0.6;
+}

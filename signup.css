@@ -1,0 +1,114 @@
+
+.h2-class{
+    color: #0baae3;
+    font-size: 4vw ;
+}
+.mini-des{
+    color:#77b2c7 ;
+    font-size: 1.5vw;
+}
+.formp{
+    color: #77b2c7;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+   
+}
+
+label{
+
+    color: hsl(196, 91%, 47%) ;
+    font-size: 18px;
+    /* font-family:  'Aboreto', cursive; */
+    margin: 10px;
+}
+.user{
+    width: 20vw;
+    height: 3.5vh;
+    color: #09111f;
+    background-color: #77b2c7;
+    border-width: 0px;
+    border-radius: 3px;
+  
+    padding: 5px;
+}
+.form-class{
+    background-color: #09111f;
+    padding: 50px;
+    width: 28vw;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+.submitbtn{
+
+    padding: 8px;
+    border-width: 0px;
+    background-color: transparent;
+    border: 1px solid #77b2c7;
+
+    border-radius: 5px;
+    color: white;
+    margin-left: 15px;
+    transition: 0.5s;
+    transition-duration: 1s;
+    
+}
+.submitbtn:hover{
+
+    background-color: #77b2c7;
+    color: white;
+    
+}
+.p2{
+    color: #0baae3;
+    font-size: 14px;
+}
+.signclass{
+    font-size: 10px;
+}
+#signupbtn{
+
+    padding: 8px;
+    border-width: 0px;
+    background-color: transparent;
+    border: 1px solid #77b2c7;
+
+    border-radius: 5px;
+    color: white;
+    margin-left: 15px;
+    transition: 0.5s;
+}
+#signupbtn:hover{
+
+    background-color: #77b2c7;
+    transition-duration: 1s;
+    
+}
+.form-class p {
+margin-left: 13px;
+margin-top: 3px;
+text-align: left;
+color: red;
+font-size: 10px;
+}
+.pop-up{
+    background-color: #0baae3;
+    height: 150px;
+    width: 350px;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+.p1{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pop-btn{
+    padding: 50px;
+    
+}

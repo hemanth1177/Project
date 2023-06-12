@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></script>
+
+
+    <title>(AI) Sign Up</title>
+</head>
+
+<body class="bg-dark">
+
+    <div id="pop-up-id" class="main-popup d-none d-flex flex-column align-items-center ">
+
+        <div class="pop-up mt-3">
+
+            <p class="p1">Your account Created Successfully</p>
+            <button id="pop-click-btn" class="btn pop-btn btn-primary">Ok</button>
+            <a href="loginpage.html"> <button id="Login-btn" class="btn  btn-primary">Login Page</button></a>
+
+        </div>
+    </div>
+
+    <div class="container-fluid  bg-dark">
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="text-container text-center ">
+
+                    <h1 class="h2-class">(AI)</h1>
+                    <span class="mini-des">Artificial Inteligence</span>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <p class="formp">Create Your New Account</p>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="form-container d-flex flex-column align-items-center">
+                    <form class="form-class text-center">
+
+                        <div class="label-container0 d-flex justify-content-start ">
+                            <label for="userid">Create Your Id</label>
+                        </div>
+                        <input autocomplete="off" class="user" id="userid" type="text">
+                        <p id="err1"></p>
+
+                        <div class="label-container1 d-flex justify-content-start ">
+                            <label for="username">Enter Your Name</label>
+                        </div>
+                        <input autocomplete="off" class="user" id="username" type="text">
+                        <p id="err2"></p>
+
+                        <div class="label-container2 d-flex justify-content-start ">
+                            <label for="useremail">Enter Email</label>
+                        </div>
+                        <input autocomplete="off" class="user" id="useremail" type="email">
+                        <p id="err3"></p>
+                        <div class="label-container3 d-flex justify-content-start">
+                            <label for="userpass">Enter Password</label> <br>
+
+                        </div>
+                        <input class="user" id="userpass" type="password"> <br>
+                        <p id="err4"></p>
+                        <div class="label-container4 d-flex justify-content-start">
+                            <label for="cpass">Enter Confirm Password</label> <br>
+
+                        </div>
+                        <input class="user" id="cpass" type="password">
+                        <p id="err5"></p>
+
+                        <div class="button-container d-flex justify-content-start mt-5">
+
+
+                            <input class="submitbtn" id="accountBtn" type="submit" value="Create Account">
+                            <input id="signupbtn" value="Reset" type="reset">
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+<script>
+
+    let id = document.getElementById('userid');
+    let name = document.getElementById('username');
+    let email = document.getElementById('useremail');
+    let pass = document.getElementById('userpass');
+    let cpass = document.getElementById('cpass');
+    idnum1 = false
+    idnum2 = false
+    namenum = false
+    emianum = false
+    passnum = false
+    cpassnum = false
+    let error1 = document.getElementById('err1');
+    id.addEventListener('blur', function () {
+
+        if (id.value === '') {
+            error1.textContent = 'Required*'
+            idnum1 = false
+        } else if (id.value.length < 10) {
+
+            error1.textContent = 'Id Must Be 10 Digits!'
+            idnum2 = false
+
+        } else if (id.value !== '' && id.value.length >= 10) {
+
+            idnum1 = true
+            idnum2 = true
+            error1.textContent = ''
+        } else {
+            error1.textContent = ''
+        }
+    })
+    let error2 = document.getElementById('err2');
+    name.addEventListener('blur', function () {
+
+        if (name.value === '') {
+            error2.textContent = 'Required*'
+            namenum = false
+        } else if (name.value != '') {
+            namenum = true
+            error2.textContent = ''
+
+        } else {
+            error2.textContent = ''
+        }
+    })
+    let error3 = document.getElementById('err3');
+    email.addEventListener('blur', function () {
+
+        if (email.value === '') {
+            error3.textContent = 'Required*'
+            emianum = false
+        } else if (email.value != '') {
+            emianum = true
+            error3.textContent = ''
+        } else {
+            error3.textContent = ''
+        }
+    })
+
+    let error4 = document.getElementById('err4');
+    pass.addEventListener('blur', function () {
+
+
+        if (pass.value === '') {
+
+            error4.textContent = 'Required*'
+            passnum = false
+        } else if (pass.value !== '') {
+            passnum = true
+            error4.textContent = ''
+        } else {
+            error4.textContent = ''
+        }
+    })
+
+    let error5 = document.getElementById('err5');
+    cpass.addEventListener('blur', function () {
+
+        if (cpass.value === '') {
+            error5.textContent = 'Required*'
+            cpassnum = false
+        } else if (cpass.value !== '') {
+            cpassnum = true
+            error5.textContent = ''
+
+
+        } else {
+            error5.textContent = ''
+        }
+    })
+
+    let accountbtn = document.getElementById('accountBtn');
+    accountbtn.addEventListener('click', function (event) {
+
+        event.preventDefault()
+        if (id.value == '' && name.value == '' && email.value == '' && pass.value == '' && cpass.value == '' && idnum1 === false && idnum2 === false && namenum === false && emianum === false && passnum === false && cpassnum === false) {
+
+        } else {
+
+            if (pass.value != cpass.value) {
+
+                error4.textContent = 'Entered Password Is Not Matching'
+
+            } else if (cpass.value != pass.value) {
+
+                error5.textContent = 'Entered Password Is Not Matching'
+
+            } else {
+
+                error1.textContent = ''
+                error2.textContent = ''
+                error3.textContent = ''
+                error4.textContent = ''
+                error5.textContent = ''
+                let details = {
+                    Id: id.value,
+                    Name: name.value,
+                    Email: email.value,
+                    Password: pass.value,
+                    ConfirmPasswors: cpass.value
+                }
+
+                let pop = document.getElementById('pop-up-id');
+                pop.classList.toggle('d-none')
+                let setitems = localStorage.setItem(JSON.stringify(details.Id), JSON.stringify(details))
+
+
+            }
+        }
+
+        let pop0 = document.getElementById('pop-up-id')
+        let pop1 = document.getElementById('pop-click-btn');
+        pop1.addEventListener('click', function () {
+
+            pop0.classList.toggle('d-none')
+        })
+
+
+    })
+
+
+
+
+
+
+</script>
+
+</html>

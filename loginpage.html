@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Neuton&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></script>
+
+    <title>(AI) Login</title>
+</head>
+
+<body class="bg-dark">
+
+
+
+    <div class="container-fluid  bg-dark">
+        <div id="mainpopup" class=" d-flex justify-content-center d-none">
+            <div id="popUp" class="pop-up ">
+                <p class="pop-text">You Don't Have Account Create One!</p>
+                <div class="button-container1 d-flex justify-content-center">
+
+                    <button id="okBtn" class="btn btn-primary">Ok</button>
+                    <a href="signup.html"><button class="btn btn-primary">Sign Up</button></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mainContainer" class="d-flex justify-content-center d-none">
+
+
+            <div class="main-container ">
+
+                <p class="pop-text">WellCome To Website </p>
+
+                <div class="button-container1 d-flex justify-content-center">
+
+                    <a href="mainpage.html"><button class="btn btn-primary">Ok</button></a>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="text-container text-center mt-5">
+
+                    <h1 class="h2-class">(AI)</h1>
+                    <span class="mini-des">Artificial Inteligence</span>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <p class="formp">Login To Your Account</p>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="form-container d-flex flex-column align-items-center">
+                    <form class="form-class text-center">
+
+                        <div class="label-container0 d-flex justify-content-start ">
+                            <label for="userid">Enter Your Id</label>
+                        </div>
+                        <input autocomplete="off" class="user" id="userid" type="text">
+                        <p id="id-error"></p>
+
+                        <div class="label-container1 d-flex justify-content-start ">
+                            <label for="username">Enter UserName</label>
+                        </div>
+                        <input autocomplete="off" class="user" id="username" type="text">
+                        <p id="name-error"></p>
+                        <div class="label-container2 d-flex justify-content-start">
+                            <label for="userpass">Enter Your Password</label> <br>
+
+                        </div>
+                        <input class="user" id="userpass" type="password"> <br>
+                        <p id="pass-error"></p>
+
+                        <div class="button-container d-flex justify-content-center mt-5">
+
+
+                            <input id="submitBtn" class="submitbtn" type="submit" value="Submit">
+
+                            <label class="signclass" for="signupbtn">SignUp if don't have account</label>
+
+                            <a href="signup.html"><input id="signupbtn" value="SignUp" type="button"></a>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+<script>
+
+    let id = document.getElementById('userid');
+    let name = document.getElementById('username');
+    let pass = document.getElementById('userpass');
+
+    let nameerr = document.getElementById('name-error');
+    let iderr = document.getElementById('id-error');
+    let passerr = document.getElementById('pass-error');
+
+    id.addEventListener('blur', function () {
+        if (id.value === '') {
+            iderr.textContent = 'Required*'
+        } else {
+            iderr.textContent = ''
+        }
+    })
+
+    name.addEventListener('blur', function () {
+        if (name.value === '') {
+            nameerr.textContent = 'Required*'
+        } else {
+            nameerr.textContent = ''
+        }
+    })
+
+
+    pass.addEventListener('blur', function () {
+        if (pass.value === '') {
+            passerr.textContent = 'Required*'
+        } else {
+            passerr.textContent = ''
+        }
+    })
+
+
+
+    let submit = document.getElementById('submitBtn');
+    submit.addEventListener('click', function (event) {
+        event.preventDefault()
+
+
+
+        let get = localStorage.getItem(JSON.stringify(id.value));
+
+
+        let parsedjson = JSON.parse(get)
+        let main_details = {
+
+            detail: JSON.parse(get)
+        }
+
+
+
+        let pop_container = document.getElementById('mainpopup');
+        if (parsedjson === null) {
+            pop_container.classList.remove('d-none');
+
+
+
+        } else {
+
+            let user_name = main_details.detail.Name;
+            let user_pass = main_details.detail.Password
+            let user_id = main_details.detail.Id
+
+            let further1 = true
+            let further12 = true
+            let further123 = true
+
+
+            if (user_name !== name.value) {
+                nameerr.textContent = 'Entered Name Is Incorrect!'
+                further1 = false
+            } else if (user_id != id.value) {
+
+                iderr.textContent = 'Entered Id Is Incorrect!'
+                further123 = false
+
+            } else if (user_pass !== pass.value) {
+                passerr.textContent = 'Entered Password is Incorrect!'
+                further12 = false
+            }
+
+            if (further1 === true && further12 === true) {
+
+                console.log('Welcome')
+                let mainBtn = document.getElementById('mainContainer');
+                mainBtn.classList.remove('d-none')
+
+
+            }
+
+        }
+
+        let okbtn = document.getElementById('okBtn');
+        okbtn.addEventListener('click', function () {
+            pop_container.classList.add('d-none')
+        })
+
+
+
+
+
+
+    }) 
+</script>
+
+</html>
